@@ -49,7 +49,7 @@ img {
     padding: 10px;
 }
 
-img:hover {
+img:nth-child(n):hover {
     border-radius:20%;
     transition: 1s ease;
 }

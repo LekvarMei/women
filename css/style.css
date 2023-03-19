@@ -2,6 +2,22 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+/* Skip to Main function */
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
 body{
 	padding: 10px;
 	background-color: #f3e9dc;
@@ -37,7 +53,12 @@ p {
     padding: 20px;
 }
 
+body{
+    width: 100%;
+}
+
 h1 {
+    width: 100%;
     text-align: center;
     font-size: 200%;
     align-self: center;
@@ -83,16 +104,7 @@ dt{
   to {padding-top: 10px;}
 }
 
-.background_image {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-image: url("../images/background_pic.gif");
-    height: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
+
 
 #Animate_image{
     animation-name: example;
@@ -124,4 +136,35 @@ footer{
     background-color: #d1ccdc;
     padding: 20px;
     margin: 10px;
+}
+
+@media all and (min-width: 700px) and (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+    }
+    .gallery div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        gap:50px;
+        align-items: flex-start;
+    } */
+    dt{
+        width: 100%;
+    }
+    dd{
+        width: 50%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    #Animate_image{
+        animation: none;
+    }
 }

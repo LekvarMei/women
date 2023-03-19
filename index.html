@@ -23,6 +23,7 @@
 
 <body>
   <header>
+    <a href="#main" class="skip">Skip to main content</a>
     <nav>
         <ul>
           <li><a href="index.html">About</a></li>
@@ -34,7 +35,7 @@
     <h1 class="background_image" id="text_with_back"> Woman's Web </h1>
   </header>
 
-  <main>
+  <main id="main">
     <img id="Animate_image" src="images/women_march_pano.jpg" alt="Image of the Ann Arbor Women's March">
     <div>
       <p>
@@ -44,24 +45,27 @@
         This website currently contains 3 pages other than this one - click below to see a short description of each!
       </p>
     </div>
-      <h2>Literature</h2>
-      <div>
-        <p>
-          This page features books written by women and for women, books and essays about feminism, poems, plays, and bios of female writers.
-        </p>
-      </div>
-      <h2>History / Politics</h2>
-      <div>
-        <p>
-          This page features bios of important women in history and women currently in Congress or otherwise politically involved.
-        </p>
-      </div>
-      <h2>Feminist Dictionary</h2>
-      <div>
-        <p>
-          This page features a collection of important feminist terminology that might make reading easier. These will include formal definitions and my own understandings of the terms.
-        </p>
-      </div>
+      <aside class="aside">
+        <div>
+            <h2>Literature</h2>
+            <button id="learn_more_lit">Learn more ></button>
+        </div>
+        <p id="intro_lit"></p>
+      </aside>
+      <aside class="aside">
+        <div>
+            <h2>History / Politics</h2>
+            <button id="learn_more_his">Learn more ></button>
+        </div>
+        <p id="intro_his"></p>
+      </aside>
+      <aside class="aside">
+        <div>
+            <h2>Feminist Dictionary</h2>
+            <button id="learn_more_fem">Learn more ></button>
+        </div>
+        <p id="intro_fem"></p>
+      </aside>
       <div>
         <p>
           <span>Kelsey's DISCLAIMER:</span> I did not know everything!! I'm only human - I'm still growing and learning and I have a limited knowledge of things, but I will do my best and work to make this page as inclusive and unbiased as possible.
@@ -77,5 +81,6 @@
       <p>Orginal content created by Kelsey Toporski 2019</p>
       <a href="#main">Back to Top</a>
     </footer>
+    <script src = 'js/learn_more.js'></script>
   </body>
 </html>

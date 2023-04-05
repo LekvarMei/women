@@ -30,24 +30,46 @@ nav {
     overflow: hidden;
     background-color: #333;
   }
+
+nav ul{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+}
   
 nav a{
     margin: 30px;
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
-  }
+    text-decoration: none;
+    width: 25%;
+}
 
 nav a:hover {
-    background-color: #ffffff;
-    color: #000000;
+    /* background-color: #ffffff; */
+    color: #f07167;
   }
+
+a.current{
+    color: #b8b8ff;
+    font-weight: bolder;
+}
+
   
 li {
     display: inline;
 }
+
+.container ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 p {
     padding: 20px;
@@ -80,10 +102,19 @@ img {
     padding: 10px;
 }
 
-img:nth-child(n):hover {
-    border-radius:20%;
+
+main div:nth-of-type(odd) img{
+    border: dashed 4px #748cab;
+    }
+
+main div:nth-of-type(even) img{
+    border: dashed 4px #d88c9a;
+    }
+
+img:hover {
+    border-radius: 10%;
     transition: 1s ease;
-}
+}    
 
 h2 {
     text-align: left;
@@ -138,7 +169,22 @@ footer{
     margin: 10px;
 }
 
+.gallery div{
+    width: 100%;
+    border: 3px solid #d1ccdc;
+    border-radius: 2%;
+    padding: 10px;
+}
+
+.container div{
+    border: 1px solid #d1ccdc;
+    padding: 10px;
+}
+
 @media all and (min-width: 700px) and (max-width:900px){
+    nav ul{
+        grid-template-columns: 1fr 1fr;
+    }
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -148,18 +194,30 @@ footer{
         display: flex;
         flex-wrap: wrap;
     }
-    /* .gallery{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction:column;
-        gap:50px;
-        align-items: flex-start;
-    } */
     dt{
         width: 100%;
     }
     dd{
         width: 50%;
+    }
+}
+
+@media all and (min-width: 900px){
+    nav ul{
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30px;
+    }
+    .gallery div{
+        width: 45%;
+        height: 600px;
+    }
+    .gallery{
+        flex-direction:row;
+        justify-content: center;
     }
 }
 
